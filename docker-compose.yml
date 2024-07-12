@@ -22,7 +22,7 @@ services:
       POSTGRES_DB: teste
     volumes:
       - pgdata:/var/lib/postgresql/data
-    networks:
+    networks: #por padrão o compose cria uma rede padrão  mas foi especificado uma rede
       - app-network
 
 volumes:
