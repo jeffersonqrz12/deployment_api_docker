@@ -6,7 +6,10 @@
     
     # Copiar os arquivos de requisitos e instalá-los
     COPY requirements.txt requirements.txt
-    RUN pip install --no-cache-dir -r requirements.txt
+    RUN pip install --no-cache-dir -r requirements.txt]
+
+    # Instalar curl para monitoramento
+    RUN apt-get update && apt-get install -y curl
     
     # Copiar o código da aplicação para o diretório de trabalho
     COPY . .
