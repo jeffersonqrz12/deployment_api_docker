@@ -1,6 +1,7 @@
 services:
   web:
     build: ./app
+    image: myapp:latest
     ports:
       - "5000:5000"
     #no codigo foi criado as variaveis como se a aplicação tivesse um banco a api não precisa...
