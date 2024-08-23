@@ -31,11 +31,18 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t myapp:latest ./app
+        docker build -t myapp:latest .
 
     - name: Run tests
       run: |
-        docker run --rm myapp:latest curl -sv http://localhost:5000/api/comment/list/1
+        # Execute the container in the background and run curl on it
+        docker run -d --name myapp -p 5000:5000 myapp:latest
+        # Wait for the service to start up
+        sleep 10
+        # Test the API
+        docker run --rm curlimages/curl:latest curl -sv http://localhost:5000/api/comment/list/1
+        # Stop the app container
+        docker stop myapp
 
     - name: Push Docker image
       if: github.event_name == 'push'
@@ -46,4 +53,4 @@ jobs:
 
     - name: Notify success
       if: success()
-      run: echo "deploy realizado com sucesso!"
+      run: echo "Deploy realizado com sucesso!"
