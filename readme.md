@@ -11,14 +11,16 @@ Docker: Para empacotar a aplicação em uma imagem e executar o container.
 🎲 Instalação
 Clone este repositório:
 
-bash
 Copiar código
 git clone https://github.com/jeffersonqrz12/deployment_api_docker
+
+
 Navegue para o diretório do projeto:
 
-bash
 Copiar código
 cd seu_repositorio
+
+
 🚀 CI/CD
 Passos para executar o pipeline:
 
