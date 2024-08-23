@@ -37,7 +37,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker-compose up -d  .
+        docker-compose up -d
 
     - name: Run tests
       run: |
