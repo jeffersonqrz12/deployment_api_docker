@@ -31,7 +31,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t myapp:latest .
+        docker-compose up -d  .
 
     - name: Run tests
       run: |
