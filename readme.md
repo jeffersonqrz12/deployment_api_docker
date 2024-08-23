@@ -13,7 +13,7 @@ Clone este repositório:
 
 bash
 Copiar código
-git clone https://github.com/seu_usuario/seu_repositorio.git
+git clone https://github.com/jeffersonqrz12/deployment_api_docker
 Navegue para o diretório do projeto:
 
 bash
